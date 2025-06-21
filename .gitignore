@@ -1,2 +1,3 @@
 __pycache__/
-echo ".enviroment/"
+.enviroment/
+.environment/
