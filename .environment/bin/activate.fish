@@ -33,7 +33,11 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
+<<<<<<< HEAD
 set -gx VIRTUAL_ENV '/home/sofia/Escritorio/itec tercero/pract prof/e-comerce/.environment'
+=======
+set -gx VIRTUAL_ENV '/home/imanol/Escritorio/Itec 2025/PP2/e-comerce/.environment'
+>>>>>>> 70729e4ca744bcc06f33a4eefd865434f615404c
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH
