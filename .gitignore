@@ -1,4 +1,8 @@
 .env/
+<<<<<<< HEAD
+=======
+.enviroment/
+>>>>>>> main
 .environment/
 env/
 __pycache__/
