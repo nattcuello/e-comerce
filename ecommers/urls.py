@@ -15,15 +15,34 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from django.urls import include
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
+    # Admin de Django
     path('admin/', admin.site.urls),
 
+    # API - cuentas, perfiles, productos, carrito, pagos, pedidos
     path('api/accounts/', include('accounts.urls')),
-
     path('api/profile/', include('profiles.urls')),
+    path('api/products/', include('products.urls')),
+    path('api/cart/', include('cart.urls')),
+    path('api/checkout/', include('checkout.urls')),
+    path('api/payments/', include('payments.urls')),
+    path('api/orders/', include('orders.urls')),
 
-
+    # Dashboard y Analytics (fuera de la API pública)
+    path('dashboard/', include('dashboard.urls')),
+    path('analytics/', include('analytics.urls')),
 ]
+
+# Servir archivos estáticos y media en desarrollo
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+# Personalización del admin
+admin.site.site_header = "Ecommerce Admin"
+admin.site.site_title = "Ecommerce Admin Portal"
+admin.site.index_title = "Bienvenido al Panel de Administración"
