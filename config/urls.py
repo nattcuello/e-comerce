@@ -14,7 +14,8 @@ urlpatterns = [
     path('api/cart/', include('cart.urls')),
     path('api/checkout/', include('checkout.urls')),
     path('api/payments/', include('payments.urls')),
-    path('api/orders/', include('orders.urls')),
+    path("api/", include("orders.urls")),
+
     
     # Dashboard administrativo
     path('dashboard/', include('dashboard.urls')),
