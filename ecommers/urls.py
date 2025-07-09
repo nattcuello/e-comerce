@@ -27,13 +27,14 @@ urlpatterns = [
     path('api/accounts/', include('accounts.urls')),
     path('api/profile/', include('profiles.urls')),
     path('api/products/', include('products.urls')),
-    path('api/cart/', include('cart.urls')),
-    path('api/checkout/', include('checkout.urls')),
-    path('api/payments/', include('payments.urls')),
+    #path('api/cart/', include('cart.urls')),
+    #path('api/checkout/', include('checkout.urls')),
+    #path('api/payments/', include('payments.urls')),
+    #path('api/orders/', include('orders.urls')),
     path('api/orders/', include('orders.urls')),
 
     # Dashboard y Analytics (fuera de la API pública)
-    path('dashboard/', include('dashboard.urls')),
+    #path('dashboard/', include('dashboard.urls')),
     path('analytics/', include('analytics.urls')),
 ]
 

@@ -1,4 +1,7 @@
 from categories.models import Category
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from products.models import Product
+
 
 class ProductListView(ListView):
     model = Product

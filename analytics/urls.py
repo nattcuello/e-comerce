@@ -6,9 +6,9 @@ app_name = 'analytics'
 
 urlpatterns = [
     # Dashboard de analytics
-    path('', views.analytics_dashboard, name='dashboard'),
+    #path('', views.analytics_dashboard, name='dashboard'),
     
     # Configuración de Google Analytics
-    path('google-analytics/', views.google_analytics_config, name='google_analytics_config'),
+    #path('google-analytics/', views.google_analytics_config, name='google_analytics_config'),
 ]
 
