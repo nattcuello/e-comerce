@@ -1,4 +1,3 @@
-# config/urls.py (URLs principales del proyecto)
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -11,6 +10,7 @@ urlpatterns = [
     # APIs
     path('api/auth/', include('accounts.urls')),
     path('api/products/', include('products.urls')),
+    path('api/categories/', include('categories.urls')),  # ← agregada esta línea
     path('api/cart/', include('cart.urls')),
     path('api/checkout/', include('checkout.urls')),
     path('api/payments/', include('payments.urls')),
@@ -33,4 +33,3 @@ if settings.DEBUG:
 admin.site.site_header = "Ecommerce Admin"
 admin.site.site_title = "Ecommerce Admin Portal"
 admin.site.index_title = "Bienvenido al Panel de Administración"
-
