@@ -1,12 +1,52 @@
+# Entornos virtuales y configuraciones
 .env/
-<<<<<<< HEAD
-=======
-.enviroment/
->>>>>>> main
 .environment/
 env/
+venv/
 __pycache__/
+
+# Archivos de Python compilados
 *.pyc
 *.pyo
+
+# Base de datos local
 *.sqlite3
 db.sqlite3
+
+# Settings locales o secretos
+settings_local.py
+*.secret
+*.key
+ecommers/**/*.json       # tu JSON de credenciales de Google Cloud
+
+# Archivos y carpetas de Node (frontend)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Compilados y empaquetados
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Archivos de logs y reportes
+*.log
+*.log.*
+coverage/
+htmlcov/
+
+# IDEs y editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Cachés de pruebas y lint
+.pytest_cache/
+.cache/
+mypy_cache/
